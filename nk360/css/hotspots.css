@@ -1,0 +1,387 @@
+@font-face {
+  font-family: "Hiragino Kaku Gothic Pro";  /* <- use the name from Figma */
+  src: url("/nk360/american-revolution-perseverance/fonts/Hiragino/Hiragino_Kaku_Gothic_Pro_W6.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* wrapper behind the PNG */
+.map-info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+
+  background-color: #50685F; 
+  border-radius: 50%;        
+      position: relative;
+    top: 4px;
+    left: -4px;
+    text-shadow: 0 0 10px #50685F;
+     filter: drop-shadow(0 0 10px #50685F);
+    transition: background-color 0.15s ease-in-out,
+              border-color 0.15s ease-in-out;
+}
+
+.map-info-icon img {
+  display: block;
+  text-shadow: 0 0 10px #50685F;
+}
+
+
+.BornHS__Wrapper {
+    position: relative;
+    padding-left: 96px;
+    padding-right: 96px;
+}
+.BornHS__Wrapper .BornHS__Close {
+    display: none;
+}
+.BornHS__Wrapper .Content__Wrapper {
+    position: relative;
+}
+.BornHS__Wrapper .BornHS__Modal__Content {
+    background:  #EDF5F2;
+    color: #000;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    /* max-width: 500px; */
+    width: 82%;
+    z-index: 44;
+}
+.BornHS__Wrapper .BornHS__Modal__Content .Content__Wrapper {
+    padding: 16px;
+}
+.BornHS__Wrapper .BornHS__Modal__Content .Content__Wrapper .BornHS__Title {
+    font-family: "HiraginoMapLabel", "Hiragino Kaku Gothic Pro W6","Segoe UI", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: .24px;
+    color: #000;
+}
+.BornHS__Wrapper .BornHS__Input {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    width: 0;
+    z-index: -1;
+}
+
+.BornHS__Wrapper .BornHS__Input + .BornHS__Label {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+
+  /* Figma font */
+  display: inline-block;
+  color: #fff;
+  
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: 0.24px;
+
+  /* keep a soft glow on the fill */
+  text-shadow: 0 0 6px rgba(80, 104, 95, 0.7);
+
+  /* IMPORTANT: stroke handled by ::before so the white stays chunky */
+  -webkit-text-stroke: 0;
+}
+
+.BornHS__Wrapper .BornHS__Input + .BornHS__Label#mohawk-label{
+transform: rotate(24deg);
+}
+
+.BornHS__Wrapper .BornHS__Input + .BornHS__Label#oneida-label{
+transform: rotate(20deg);
+}
+
+.BornHS__Wrapper .BornHS__Input + .BornHS__Label#tuscarora-label{
+transform: rotate(26deg);
+}
+
+.BornHS__Wrapper .BornHS__Input + .BornHS__Label#onondaga-label{
+transform: rotate(52deg);
+}
+
+.BornHS__Wrapper .BornHS__Input + .BornHS__Label#cayuga-label{
+transform: rotate(54deg);
+}
+
+.BornHS__Wrapper .BornHS__Input + .BornHS__Label#seneca-label{
+transform: rotate(54deg);
+}
+
+
+
+
+.BornHS__Wrapper .BornHS__Input + .BornHS__Label:before, .BornHS__Wrapper .BornHS__Input + .BornHS__Label:after {
+    background: #fff;
+    content: "";
+    cursor: pointer;
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+.BornHS__Wrapper .BornHS__Input ~ .BornHS__Overlay {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+}
+
+.BornHS__Wrapper .BornHS__Input:checked ~ .BornHS__Modal__Content {
+    opacity: 1;
+    visibility: visible;
+}
+.BornHS__Wrapper .BornHS__Input:checked ~ .BornHS__Overlay {
+    display: block;
+}
+
+.BornHS__Wrapper.BornHS__Blur .BornHS__Input {
+    display: none;
+}
+.BornHS__Wrapper.BornHS__Blur .BornHS__Input + .BornHS__Label {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.BornHS__Wrapper.BornHS__Blur .BornHS__Input:checked {
+    display: inline-block;
+}
+.BornHS__Wrapper.BornHS__Blur .BornHS__Input:checked + .BornHS__Label {
+    opacity: 1;
+    pointer-events: auto;
+}
+.BornHS__Modal {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+.BornHS__Wrapper .BornHS__Modal__Content .BornHS__Close:before {
+ height: 2px;
+ width: 40%;
+}
+.BornHS__Wrapper .BornHS__Modal__Content .BornHS__Close:after {
+ height: 40%;
+ width: 2px;
+}
+
+ .BornHS__Wrapper .BornHS__Modal__Content .BornHS__Close {
+   cursor: pointer;
+   display: block;
+   position: absolute;
+   transition: all 300ms ease;
+   z-index: 5;
+}
+  .BornHS__Wrapper .BornHS__Modal__Content .BornHS__Close:after {
+   /* content: "\00d7"; */
+   cursor: pointer;
+   display: block;
+   left: 50%;
+   position: absolute;
+   top: -20px;
+   font-size: 64px;
+}
+
+.BornHS__Close {
+  cursor: pointer;
+  position: absolute;
+  top: -24px;
+  right: -24px;
+
+  /* make it a little hit area around the icon */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+  background: transparent;
+  z-index: 5;
+
+  /* smooth hover */
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.BornHS__Close img {
+  display: block;   /* removes the little extra inline gap */
+  position: relative;
+  top: -1px;
+  right: 0;
+}
+
+/* hover/focus state on the LABEL, not the img */
+.BornHS__Close:hover,
+.BornHS__Close:focus-visible {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+  .BornHS__Modal__Content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: white;
+    padding: 1.5rem;
+    /* max-width: 90%; */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  @media (max-width: 1200px) {
+  .BornHS__Wrapper  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 768px) {
+    .BornHS__Wrapper .BornHS__Modal__Content {
+        bottom: auto !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+   }
+
+}
+
+/* Focus indicator for the close label */
+
+/* Keyboard focus ring for hotspot labels */
+/* .BornHS__Label:focus,
+.BornHS__Label:focus-visible {
+  outline: 4px solid #000;
+  outline-offset: 2px; 
+} */
+
+/* White map label text */
+.map-label {
+  position: relative;
+  z-index: 1;
+
+  color: #fff;  /* solid white fill */
+
+  font-family: "HiraginoMapLabel", "Hiragino Kaku Gothic Pro W6",
+               -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 110%;
+  letter-spacing: 0.24px;
+
+  /* soft glow from Figma */
+  text-shadow: 0 0 10px #50685F;
+
+  /* keep the fill thick */
+  -webkit-text-stroke: 0;
+    transition: text-shadow 0.15s ease-in-out;
+
+}
+
+/* Dark green outline behind the white text */
+.map-label::before {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #50685F;
+  text-shadow: 0 0 10px #50685F;
+  pointer-events: none;
+  z-index: -1;
+   transition: -webkit-text-stroke-color 0.15s ease-in-out;
+
+  /* Windows baseline */
+  top: 3.5px;
+  right: -2px;
+  left: 0.2px;
+}
+
+/* On macOS, reset the offset */
+html.os-mac .map-label::before {
+  top: -.8px;
+  left: 0px;
+}
+
+
+/* Hover states */
+/* text outline change */
+.BornHS__Label:hover .map-label::before,
+.BornHS__Label:focus-visible .map-label::before {
+  -webkit-text-stroke-color: #2C3A35;
+}
+
+/* icon glow + background change */
+.BornHS__Label:hover .map-info-icon,
+.BornHS__Label:focus-visible .map-info-icon {
+  filter: drop-shadow(0 0 10px #2C3A35);
+  background-color: #2C3A35;
+}
+
+/* Overlay for :modal */
+/* Full-screen dark backdrop for any open hotspot */
+.BornHS__Wrapper .BornHS__Input ~ .BornHS__Overlay {
+  position: fixed;          
+  inset: 0;                 
+  background: rgba(0, 0, 0, 0.25);  
+  display: none;
+  z-index: 900;             
+  cursor: pointer;
+}
+
+.BornHS__Wrapper .BornHS__Input:checked ~ .BornHS__Overlay {
+  display: block;
+}
+.BornHS__Wrapper .BornHS__Modal__Content {
+  z-index: 1000;            
+}
+
+
+/* Keep hotspot checkboxes off-screen so focusing them doesn't scroll the page */
+#popup-toggle .BornHS__Input {
+  position: fixed;           /* decouple from the map layout */
+  left: -9999px !important;  /* way off-screen horizontally */
+  top: 0 !important;         /* fixed at top, but off-screen to the left */
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#popup-toggle .BornHS__Wrapper .BornHS__Input + .BornHS__Label {
+  z-index: 2;          /* clickable state */
+}
+
+/* when any modal is open, push ALL labels behind overlay/modal */
+#popup-toggle .BornHS__Wrapper.map-modal-open .BornHS__Input + .BornHS__Label {
+  z-index: 0;          /* visually under the modal */
+}
+
+
+
+
+
+
+
+
+
