@@ -1,0 +1,62 @@
+/* ===== Custom White Audio ONLY ===== */
+.custom-audio-white .able-player {
+  background-color: transparent !important;
+  font-family: inherit !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  max-width: 100%;
+  font-size: 16px;
+}
+.custom-audio-white .able { background-color: transparent; box-shadow: none; }
+.custom-audio-white .able-wrapper { margin: 0; }
+
+/* hide buttons you don’t want on audio */
+.custom-audio-white .able-button-handler-rewind,
+.custom-audio-white .able-button-handler-forward,
+.custom-audio-white .able-button-handler-restart,
+.custom-audio-white .able-button-handler-preferences,
+.custom-audio-white .able-button-handler-faster,
+.custom-audio-white .able-button-handler-slower,
+.custom-audio-white .able-button-handler-volume { display: none !important; }
+
+/* icon size just for audio */
+.custom-audio-white .able-controller div[role="button"] > span,
+.custom-audio-white .able-controller div[role="button"] > img {
+  width: 40px;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 6700;
+  display: block;
+}
+
+/* controller look/placement */
+.custom-audio-white .able-controller { position: relative; min-height: 40px; border-bottom: none; background: none; }
+.custom-audio-white .able-left-controls { display: flex; align-items: center; gap: .5rem; position: relative; top: -5px; }
+.custom-audio-white .able-right-controls { display: flex; align-items: center; gap: .5rem; margin-left: auto; top: 20px; left: 60px; }
+
+/* seekbar skin */
+.custom-audio-white .able-seekbar-wrapper {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  width: calc(100% - 160px); max-width: 550px; padding: .25rem 0; z-index: 9999 !important;
+}
+@media (max-width: 500px){
+  .custom-audio-white .able-seekbar-wrapper { width: calc(100% - 120px); }
+}
+.custom-audio-white .able-seekbar { background:#c0c0c0; height:8px; border-radius:4px; position:relative; border: none; }
+.custom-audio-white .able-seekbar-played { background:#000; height:8px; border-radius:4px; position:absolute; top:0; left:0; }
+.custom-audio-white .able-seekbar-loaded { background:#999; height:8px; border-radius:4px; position:absolute; top:0; left:0; }
+.custom-audio-white .able-seekbar-head { width:12px; height:12px; background:#000; border-radius:50%; position:absolute; top:-1.8px; transform:translateX(-50%); border: none; }
+
+/* status bar layout */
+.custom-audio-white .able-status { display:none !important; }
+.custom-audio-white .able-status-bar {
+  display:block !important; text-align:center; margin-top:.25rem; color:#000;
+  position:relative; top:-65px;
+  font-family:"Source Sans 3"; font-size:16px; font-weight:400; line-height:140%; letter-spacing:.019px;
+}
+.custom-audio-white .able-status-bar span.able-timer{ text-align:center; float:none; width:100%; }
+.custom-audio-white .able-elapsedTime{ float:left; margin-left:35px; }
+.custom-audio-white .able-duration{ float:right; margin-right:35px; }
+
+/* keep Able’s native <audio> hidden for this player */
+.custom-audio-white .able-media-container audio{ display: none !important; }
