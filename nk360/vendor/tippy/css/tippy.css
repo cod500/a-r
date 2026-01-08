@@ -1,0 +1,42 @@
+.tippy-box[data-animation="scale"][data-placement^="top"] {
+    transform-origin: bottom;
+}
+.tippy-box[data-animation="scale"][data-placement^="bottom"] {
+    transform-origin: top;
+}
+.tippy-box[data-animation="scale"][data-placement^="left"] {
+    transform-origin: right;
+}
+.tippy-box[data-animation="scale"][data-placement^="right"] {
+    transform-origin: left;
+}
+.tippy-box[data-animation="scale"][data-state="hidden"] {
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow:before {
+    bottom: -7px;
+    left: 0;
+    border-width: 8px 8px 0;
+    border-top-color: black!important;
+    transform-origin: center top;
+}
+
+/* Custom tooltip theme */
+.tippy-box[data-theme~="nk"] {
+  background-color: #000;   /* tooltip background */
+  color: #fff;                 /* text color */
+  border-radius: 6px;
+}
+
+/* match arrow to the background */
+.tippy-box[data-theme~="nk"] .tippy-arrow {
+  color: #162C42;
+}
+
+/* optional: content padding or font size tweaks */
+.tippy-box[data-theme~="nk"] .tippy-content {
+  padding: 8px 10px;
+  font-size: 14px;
+}
