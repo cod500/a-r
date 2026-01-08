@@ -1,0 +1,18 @@
+/* One background that paints the entire block */
+.ch2-gradient{
+  /* left blue rail + right vertical gradient */
+  background:
+    linear-gradient(var(--side-nav-bg), var(--side-nav-bg)) 0 0 / var(--side-nav-width) 100% no-repeat,
+    linear-gradient(180deg, #F2EDE6 2%, #E4D6C2 24%, #CD7A55 54%, #C15425 84%) var(--side-nav-width) 0 / calc(100% - var(--side-nav-width)) 100% no-repeat;
+  background-color: #fefdf8; /* base behind both layers */
+}
+
+/* Let the gradient show through everything inside it */
+.ch2-gradient .chapter-background,
+.ch2-gradient .content-outer,
+.ch2-gradient .content-before,
+.ch2-gradient .content,
+.ch2-gradient .home-page,
+.ch2-gradient .home-page-section{
+  background: transparent !important;
+}

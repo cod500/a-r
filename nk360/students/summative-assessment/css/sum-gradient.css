@@ -1,0 +1,32 @@
+/* One background that paints the entire block */
+.ch2-gradient{
+  /* left blue rail + right vertical gradient */
+  background:
+    linear-gradient(var(--side-nav-bg), var(--side-nav-bg)) 0 0 / var(--side-nav-width) 100% no-repeat,
+   linear-gradient(180deg, #FDF9F3 10%, #ECD7BA 55%, #DA9335 77.96%) var(--side-nav-width) 0 / calc(100% - var(--side-nav-width)) 100% no-repeat;
+  background-color: #fefdf8; /* base behind both layers */
+}
+
+/* Let the gradient show through everything inside it */
+.ch2-gradient .chapter-background,
+.ch2-gradient .content-outer,
+.ch2-gradient .content-before,
+.ch2-gradient .content,
+.ch2-gradient .home-page,
+.ch2-gradient .home-page-section{
+  background: transparent !important;
+}
+
+
+/* Return to solid page background from the Chapter Review down */
+.ch2-gradient .content-outer.stop-gradient,
+.ch2-gradient .content-outer.stop-gradient .content,
+.ch2-gradient .content-outer.stop-gradient .chapter-background {
+  background: #f2ede7 !important; /* beats the earlier transparent !important */
+}
+
+.ch2-gradient .content-outer.stop-gradient-bottom,
+.ch2-gradient .content-outer.stop-gradient-bottom .content,
+.ch2-gradient .content-outer.stop-gradient-bottom .chapter-background {
+  background: #fefefc !important; /* beats the earlier transparent !important */
+}

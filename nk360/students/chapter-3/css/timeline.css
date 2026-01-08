@@ -1,0 +1,80 @@
+ :root{
+    /* original canvas size (don’t change) */
+    --svg-w: 940;
+    --svg-h: 524;
+
+    /* tweak these to match your design */
+    --rail-color: #1a1a1a;     /* line + chevrons */
+    --rail-width: 2.0;         /* stroke thickness */
+
+    --dot-color: #DA9335;
+
+    --card-bg: #47372D;
+    --card-fg: #fff;
+    --card-border: #000;
+    --card-radius: 8px;
+  }
+
+  .timeline-wrap{
+    position: relative;
+     width: 95%;
+    aspect-ratio: var(--svg-w) / var(--svg-h);
+    margin-inline: auto;
+    font-family: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+
+  .tl-art{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    color: var(--rail-color); /* lets markers inherit this color */
+  }
+
+  /* thin stroked rail with round caps */
+  .tl-rail-stroked{
+    stroke: var(--rail-color);
+    stroke-width: var(--rail-width);
+    stroke-linecap: round;
+    fill: none;
+    vector-effect: non-scaling-stroke; /* keep stroke crisp as we resize */
+  }
+
+  .tl-dot{ fill: var(--dot-color); }
+
+  /* Card positions on the 940×524 canvas (same as before) */
+  .tl-card-1{
+    left: 3.35%;   top: 25.13%;
+    width: 34.15%; height: fit-content;
+  
+  }
+  .tl-card-2{
+    left: 44.95%;  top: 17%;
+    width: 34.15%; height: fit-content;
+    
+  }
+  .tl-card-3{
+    left: 24.73%;  top: 59.26%;
+    width: 31.81%; height: fit-content;
+  }
+  .tl-card-4{
+    left: 64.31%;  top: 59.26%;
+    width: 31.81%; height: fit-content;
+  }
+
+  @media (max-width: 1200px){
+    #chapter3-reference-timeline{
+display: none;
+    }
+  }
+  
+  .timeline-container {
+    width: 1000px !important;
+    margin: auto;
+    margin-top: -61px;
+    margin-bottom: -6px;
+}
+
+  

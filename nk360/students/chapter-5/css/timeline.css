@@ -1,0 +1,136 @@
+/* ============================
+   CHAPTER 5 — Reference Timeline (scoped)
+   ============================ */
+
+#chapter5-reference-timeline{
+  /* intrinsic canvas */
+  --svg-w: 940;
+  --svg-h: 524;
+
+  /* rail + chevrons */
+  --rail-color: #1a1a1a;
+  --rail-width: 2;
+
+  /* dots */
+  --dot-color: #DA9335;
+
+  /* cards */
+  --card-bg: #EABF8B;
+  --card-fg: #000;
+  --card-border: #000;
+  --card-radius: 8px;
+
+  --wrap-width: 95%;
+}
+
+/* wrapper */
+#chapter5-reference-timeline.timeline-wrap{
+  position: relative;
+  width: var(--wrap-width);
+  aspect-ratio: var(--svg-w) / var(--svg-h);
+  margin-inline: auto;
+  font-family: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* art layer */
+#chapter5-reference-timeline .tl-art{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--rail-color); /* markers use currentColor */
+}
+
+/* rail line */
+#chapter5-reference-timeline .tl-rail-stroked{
+  stroke: var(--rail-color);
+  stroke-width: var(--rail-width);
+  stroke-linecap: round;
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+/* dots */
+#chapter5-reference-timeline .tl-dot{ fill: var(--dot-color); }
+
+/* cards */
+#chapter5-reference-timeline .tl-card{
+  position: absolute;
+  z-index: 1;
+  background: var(--card-bg);
+  color: var(--card-fg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 16px 20px;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+}
+
+#chapter5-reference-timeline .tl-card h3{
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.35;
+  color: var(--card-fg);
+}
+
+#chapter5-reference-timeline .tl-card p{
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  color: var(--card-fg);
+  letter-spacing: 0.024px;
+}
+
+/* -------------------------
+   Positions (percent of 940×524)
+   2 top cards, 1 bottom card
+   ------------------------- */
+
+/* Top row (two large cards) */
+#chapter5-reference-timeline .tl-card-1{
+  left: 3%;    
+  top:11.5%;
+  width: 43.5%;  
+   height: fit-content;
+}
+#chapter5-reference-timeline .tl-card-2{
+  left: 54%;   
+   top: 19.5%;
+  width: 43.5%;  
+   height: fit-content;
+}
+
+/* Bottom row (one wide card) */
+#chapter5-reference-timeline .tl-card-3{
+  left: 28%;  
+  top: 61.5%;
+  width: 43.5%;   
+  height: 281px;
+}
+
+/* Optional: tighten padding slightly on narrower widths without changing font-size */
+@media (max-width: 1100px){
+  #chapter5-reference-timeline .tl-card{ padding: 14px 16px; }
+}
+
+/* Optional: hide desktop version if you have a mobile timeline elsewhere */
+@media (max-width: 1200px){
+  #chapter5-reference-timeline{ display: none; }
+}
+
+
+  .timeline-container{
+width: 1000px!important;
+margin: auto;
+margin-top: -13px;
+margin-bottom: 144px;
+  }
+
+  .tl-card .content-list li{
+    font-size:16px !important;
+    line-height: 110%;
+  }
