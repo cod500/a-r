@@ -1,0 +1,439 @@
+/* ===============================
+   Chapter 3 Theme (drop-in)
+   - 1500px rail
+   - Ch3 colors, gradients, patterns
+   - Hero/CTA/Section headers
+   - Home-page block fluid split (25/75 → 50/50 cap)
+   =============================== */
+
+:root{
+  --ch3-ink: #162c42;     /* nav/outer bg ink */
+  --ch3-bg:  #FDF9F2;     /* chapter paper */
+  --ch3-accent: #365F6D;  /* Chapter 3 green */
+  --ch3-accent-dark: #6F8E83;
+  --ch3-tint: #EFE7DC;    /* soft beige tint over patterns */
+
+  --content-max: 1500px;
+  --content-pad: 24px;
+
+  --circle-size: 70px;         /* badge diameter */
+  --gap-after-badge: 16px;     /* space between badge and title */
+  --circle-gap: 12px;          /* used for general rail offsets */
+  --circle-nudge: clamp(-4px, 0.6vw, 4px);
+
+}
+
+/* ---- Outer/paper ---- */
+
+/* Badge + patterned strip */
+#lesson-hero-4 .chapter-hero.chapter-title-container{
+  position:relative; isolation:isolate;
+  margin:0;
+  padding-top: 0;
+}
+#lesson-hero-4 .chapter-hero.chapter-title-container::before{
+  content: attr(data-chapter);
+  position:absolute; z-index:2;
+  width: var(--circle-size); height: var(--circle-size);
+  border-radius:50%;
+  background: #365F6D;
+  color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font: 600 32px/1 "Hiragino Kaku Gothic Pro W6", system-ui, sans-serif;
+  letter-spacing:1.229px;
+}
+#lesson-hero-4 .chapter-hero.chapter-title-container::after{
+   content:"";
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(#fffaf4,#fffaf4),                
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-4/ch-4-layer.png");  
+  background-repeat:no-repeat,no-repeat;
+  background-size:cover,cover;
+  background-position:center,center;
+  opacity:1;                                     
+  background-blend-mode:color;
+}
+
+#lesson-hero-4 .chapter-header-text .sub-header{
+  color:#000;
+  font: 400 24px/1.1 "Source Sans 3", system-ui, sans-serif;
+  letter-spacing:.691px;
+  margin:0;
+}
+
+.lesson-title{
+color: var(--True-Black, #000);
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.28px;
+}
+.lesson-title .nowrap{ white-space:nowrap; }
+
+/* Hero art stays on the right; gentle shift toward 50/50 on wide screens */
+
+
+#lesson-hero-4 .hero-art img{
+  display:block; width:100%; height:350px; object-fit:cover;
+}
+
+/* ===============================================================
+   CTA bar under hero (on the same rail)
+   =============================================================== */
+.chapter-cta{
+  background: var(--ch3-accent);
+  color:#000;                        /* high-contrast over #809D92 */
+  display:flex; align-items:center; justify-content:space-between;
+  gap:24px; padding:20px 24px; border-top:4px solid rgba(0,0,0,.08);
+  /* rail padding */
+  box-sizing:border-box;
+}
+.chapter-cta .cta-title{
+  font:600 26px/35px "Hiragino Kaku Gothic Pro W6", system-ui, sans-serif;
+  letter-spacing:.593px;
+  color:#fff;
+}
+.chapter-cta .question{
+  font:400 32px/1.1 "Source Sans 3", system-ui, sans-serif;
+  letter-spacing:.038px;
+  width:70%; color:#fff;
+}
+.download-btn {
+  background: #365F6D;
+}
+
+/* Hover, focus, active states */
+.download-btn:hover,
+.download-btn:focus,
+.download-btn:active {
+  background: #365F6DBF !important; /* lighter green overlay */
+}
+
+.chapter-card-btn {
+  border: 2px solid #365F6D; /* Card border */
+  background-color: #365F6D; /* Button background */
+}
+
+.chapter-card-btn:hover {
+  background-color: #365F6DBF; /* Hover background */
+  border-color: #365F6DBF;     /* Hover border */
+}
+
+.chapter-card-btn:hover .teacher-instruction-img {
+  border-color: #365F6DBF !important;
+}
+
+.interactive-card-btn {
+  border: 2px solid #365F6D;     /* Card border */
+  background-color: #365F6D;     /* Button background */
+}
+
+.interactive-card-btn:hover {
+  background-color: #365F6DBF;   /* Hover background */
+  border-color: #365F6DBF;       /* Hover border */
+}
+
+.interactive-card-btn:hover .image-box img {
+  border-color: #365F6DBF;
+}
+
+
+/* ===============================================================
+   Section headers (pattern + solid tint like Ch3)
+   =============================================================== */
+.section-title{
+  color:#fff;
+  font-family:"Source Sans 3";
+  font-size:40px;
+  font-weight:700;
+  line-height:110%;
+  letter-spacing:.048px;
+  padding:12px 24px;
+  margin-bottom:0;
+}
+
+.section-title-container{
+     background:
+    linear-gradient(var(--ch3-accent), var(--ch3-accent)) 0 0 / 100% 100% no-repeat,
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-4/Tch4-background-Pattern.png") 0 0 / 500px auto repeat;
+  background-blend-mode: color;
+}
+
+
+/* Green left panel */
+#chapter-3-block{ background: var(--ch3-accent); }
+
+/* Keep the panel text on the same left rail as headers */
+
+
+/* Image side always fills */
+#chapter-3-block-border .home-page-chapter-img img{
+  display:block; width:100%; height:100%; object-fit:cover;
+}
+
+/* Buttons & images adopt Ch3 accent borders */
+.chapter-img-desktop,
+.teacher-instruction-img,
+.interactive-instruction-img{
+  border: 0px solid var(--ch3-accent) !important;
+}
+
+/* ===============================================================
+   Accordions (Ch3 hues)
+   =============================================================== */
+.accordion-header{ background: #365F6D!important; }
+.accordion-content{
+  background:#D8DFDC !important;        
+  border-bottom: 1px solid #000 !important;
+}
+.accordion-title{ color:#fff; }
+
+
+.chapter-title-container{
+    margin: 0;
+}
+
+/* Small/mobile tweaks */
+@media (max-width:1200px){
+  #lesson-hero-4 .hero-art{ display:none; }
+    .chapter-title-container[data-chapter="4"]::before{
+       top: 16px!important;
+      left: 16px!important;
+    }
+}
+
+
+.start-btn{
+color: var(--True-White, #000);
+
+/* Quotient - buttons */
+font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 95%; /* 19px */
+background: #809D92;
+text-decoration: none;
+cursor: pointer;
+}
+
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #809D92;
+  color: #000;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.interactive-start-btn{
+  display: flex;
+  width: 100%;                 
+  padding: 16px;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 12px;                   
+  background: #809D92;
+  color: #000;
+  font-family: "Source Sans 3";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 95%;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #809D92;
+  color: #000;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.chapter-title-border[data-chapter="4"],
+.chapter-title-border-bottom[data-chapter="4"]{
+  padding-left: 0 !important;
+}
+
+
+/* === CH2 TITLE-BORDER: full-bleed patterned band, no circle === */
+/* Reuse the same construction style as the section headers (like CH3),
+   but targeted to the title-border band(s) for Chapter 2 only. */
+
+/* 1) Kill the circle in the border bands */
+.chapter-title-container.chapter-title-border[data-chapter="4"]::before,
+.chapter-title-container.chapter-title-border-bottom[data-chapter="4"]::before{
+  content: none !important;
+}
+
+/* 2) Make the band full-bleed + identical “tint over pattern” background */
+.chapter-title-container.chapter-title-border[data-chapter="4"],
+.chapter-title-container.chapter-title-border-bottom[data-chapter="4"]{
+  position: relative;
+  isolation: isolate;
+  display: block;
+
+  /* wipe inherited spacing from generic .chapter-title-container */
+  padding: 0 !important;
+  margin: 0 !important;
+
+  /* ensure it spans edge-to-edge */
+  width: 100%;
+  background: none !important; /* we’ll draw it with ::after */
+}
+
+.chapter-title-container.chapter-title-border[data-chapter="4"]::after,
+.chapter-title-container.chapter-title-border-bottom[data-chapter="4"]::after{
+   content:"";
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(#fffaf4,#fffaf4),                
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-4/ch-4-layer.png");  
+  background-repeat:no-repeat,no-repeat;
+  background-size:cover,cover;
+  background-position:center,center;
+  opacity:1;                                     
+  background-blend-mode:color;
+}
+
+.chapter-title-container.chapter-title-border[data-chapter="4"] > *,
+.chapter-title-container.chapter-title-border-bottom[data-chapter="4"] > *{
+  position: relative;
+  z-index: 1;
+}
+
+
+.download-btn{
+  display: inline-flex;
+  align-items: center;
+ border: none;
+ justify-content: space-between;
+  background:transparent;
+  color:#fff;
+  padding:12px 20px;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+  color: #FFF;
+
+/* Quotient - PDF */
+font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 20px */
+letter-spacing: 0.024px;
+text-decoration: none;
+}
+.download-btn .icon{ height:1.1em; }
+
+.download-btn:hover{
+background: #fff;
+  color: #090B07;
+  border: none;
+}
+
+a.btn.start-btn {
+  text-decoration: none !important;
+}
+
+a.btn.start-btn:hover {
+  text-decoration: none !important;
+  color: #fff;
+  /* background-color: #17467B; hover background */
+}
+
+.start-btn{
+color: var(--True-White, #FFF);
+
+/* Quotient - buttons */
+font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 95%; /* 19px */
+background: #365F6D;
+text-decoration: none;
+cursor: pointer;
+}
+
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #365F6D;
+  color: #fff;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.interactive-start-btn{
+  display: flex;
+  width: 100%;                 
+  padding: 16px;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 12px;                   
+  background: #365F6D;
+  color: #fff;
+  font-family: "Source Sans 3";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 95%;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #365F6D;
+  color: #fff;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.image-box{ justify-content: flex-start !important; }
+
+.start-btn-links{
+  display: block;
+  width: 216px;          
+  /* margin: 0 0 0 auto;   */
+}
+
+
+.start-btn-links, .interactive-btn-links{
+  text-decoration: none;
+}
+
+.start-btn-links:hover, .interactive-btn-links:hover{
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+    .interactive-start-btn, .small-start-btn, .start-btn-links, .interactive-btn-links {
+        width: 100%;
+    }
+}
+
+.small-start-btn .btn-arrow { margin-left: auto; }
+
+.at-a-glance-title, .related-title, .card-title, .card-subtitle{
+ color: #365F6D !important;
+}
+
+

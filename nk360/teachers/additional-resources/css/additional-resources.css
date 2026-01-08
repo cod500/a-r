@@ -1,0 +1,68 @@
+.accordion-header{
+background: var(--AmRev-AR, #DA9335);
+
+}
+
+.accordion-content {
+background: #F5E4CC!important;
+}
+
+.accordion-title{
+  color: #000;
+}
+
+ .button-container a.btn.btn-dark.download-btn, #expand-all{
+  display: inline-grid !important;    
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: .5rem;
+  background-color: #022957;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+#expand-all:hover{
+    background-color: #022957BF;
+    color:#FFF !important ;
+}
+
+
+@media (max-width: 1200px) {
+  nav.sideNav.home-nav[data-nav="overview"].force-open-teachers #nav-lessons,
+  nav.sideNav.home-nav[data-nav="overview"].force-open-teachers #nav-vocab,
+  nav.sideNav.home-nav[data-nav="overview"].force-open-teachers #nav-close,
+  nav.sideNav.home-nav[data-nav="overview"].force-open-teachers #nav-additional {
+    display: block !important; /* needs !important to beat the inline style your JS sets */
+  }
+  .top-accordian-content{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+
+.external-link {
+  color: #2B5582;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+}
+
+.external-link .external-icon {
+  width: 20px;
+  height: 20px;
+  transition: 0.25s;
+}
+
+.external-link:hover {
+  color: #24476D;
+}
+
+.external-link:hover .external-icon {
+  content: url('/nk360/american-revolution-perseverance/assets/images/arrow_outward_hover.svg');
+}

@@ -1,0 +1,1513 @@
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/nk360/american-revolution-perseverance/fonts/Source_Sans_3/static/SourceSans3-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/nk360/american-revolution-perseverance/fonts/Source_Sans_3/static/SourceSans3-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/nk360/american-revolution-perseverance/fonts/Source_Sans_3/static/SourceSans3-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/nk360/american-revolution-perseverance/fonts/Source_Sans_3/static/SourceSans3-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/nk360/american-revolution-perseverance/fonts/Source_Sans_3/static/SourceSans3-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Hiragino Kaku Gothic Pro W3";
+  src: url("/nk360/american-revolution-perseverance/fonts/Hiragino/Hiragino_Kaku_Gothic_Pro_W3.otf") format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Hiragino Kaku Gothic Pro W6";
+  src: url("/nk360/american-revolution-perseverance/fonts/Hiragino/Hiragino_Kaku_Gothic_Pro_W6.otf") format("opentype");
+  font-weight: 600;
+}
+
+ol li{
+  margin-bottom: 24px;
+}
+.row{
+  margin: 0!important;
+
+}
+.chapter-background { 
+  background: #FFFAF3 !important; }   
+#footer {
+  clear: both;
+}
+iframe {
+  border: none;
+}
+
+@media (max-width: 1200px) {
+    .float-right{
+        float: none!important;
+    }
+}
+
+.before-text-container { 
+  margin:auto;
+   padding:0; 
+   width:100%;
+  max-width: none; 
+}  
+
+.content-width{
+  max-width: 1500px!important;
+  margin: auto!important;
+}
+
+.content {
+  /* padding-left: 236.8px; */
+  /* width: 100%; */
+  background-color: #fff;
+  /* max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto; */
+}
+.content-outer{
+  background-color: var(--menu) !important;
+  width: 100%;
+  padding-left: 215px;
+}
+@media (max-width: 1200px) {
+.content-outer{
+  background-color: white !important;
+  padding-left: 0;
+}
+}
+.content.home-page{
+  /* padding-left: 215px; */
+  /* border-bottom: 2px solid #000; */
+
+}
+.content.content-intro {
+  background-color: #fff !important;
+}
+/* .content-before {
+  background-color: var(--section) !important;
+} */
+.before-text-container,
+.toolkit-section.toolkit-videos {
+  margin: auto;
+  padding: 0;
+  width: 100%;
+}
+.content-videos {
+  background-color: var(--video-bg);
+}
+.content-photos {
+  background-color: #d9d9d9;
+}
+/* .content-photos-last {
+  padding-bottom: 64px;
+} */
+.content .content-resource {
+  background-color: var(--bg);
+}
+.content-p,
+.content-p-images {
+ font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 28px */
+letter-spacing: 0.024px;
+}
+.content-p.intro-text {
+  padding: 0;
+}
+#sidebarWrap > div.left-column.colum-flex > div.photos-uniform-container > div.content-p-images {
+  /* margin-top: 20px; */
+}
+.content-p-indent {
+  margin-left: 1.4rem;
+  font-size: 20px;
+}
+.content-p-images {
+  background-color: var(--section);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  letter-spacing: 0.024px;
+}
+.content-p.content-p-aside{
+  margin-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.citation-text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.019px;
+  margin-bottom: 0;
+}
+@media (max-width: 1200px) {
+  .content.home-page {
+    padding-left: 0;
+  }
+}
+
+/* #footer {
+  height: 0px;
+  visibility: hidden;
+} */
+.right-header-home-si {
+  background-color: #000;
+  height: 40px;
+  padding: 3px 32px;
+}
+
+.home-header-top.svelte-13wjxji img.svelte-13wjxji {
+  width: 550px;
+  margin-top: 2px;
+}
+
+#nk360-header img,
+#nk360-2-header img {
+  vertical-align: bottom;
+  width: 300px;
+  margin-top: 12px;
+}
+.img-credit{
+ position: relative;
+font-size: 16px;
+font-weight: 400;
+margin-top: 8px;
+margin-bottom: 0;
+}
+.img-credit-1{
+  margin-top: 64px;
+}
+
+@media (max-width: 1200px) {
+  .img-credit-1{
+    margin-top: 0px;
+  }
+  .right-header-home-si,
+  .right-header-home-nk {
+    display: none;
+  }
+  /* .sideNav {
+    top: 0;
+    z-index: 99999;
+  } */
+  a#nk360-header,
+  a#nk360-header-2 {
+    margin: auto;
+    margin-top: 14px;
+  }
+  #nk360-header img,
+  #nk360-header-2 img {
+    vertical-align: bottom;
+    width: 288px;
+    height: 19px;
+    margin-top: 10px;
+  }
+}
+.content-devider {
+  background-color: var(--bg);
+  padding: 24px;
+}
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content-container > div {
+  color: #fff;
+  flex: 0 0 calc(100%);
+  text-align: center;
+  font-size: 30px;
+}
+
+.content-column-one {
+  /* background: #64386f; */
+  height: 100%;
+  margin: auto;
+}
+.content-column-one h1 {
+  color: #000;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.2;
+  /* height: 134px; */
+  max-width: 1066px;
+  margin-bottom: 0;
+}
+@media (max-width: 1450px) {
+  .content-column-one h1 {
+    padding: 20px 0px 0px 0px;
+  }
+}
+@media (max-width: 1305px) {
+  .content-column-one h1 {
+    /* padding: 30px 20px 0px 55px; */
+  }
+}
+#resources {
+  background-color: var(--bg);
+}
+#resources > div > h2 {
+  color: #fff;
+}
+h3.accordion-title {
+  padding-left: 20px;
+  border-bottom: 1px solid #000;
+}
+.accordion-title.resource-title {
+  padding-top: 24px;
+  padding-left: 0;
+}
+.discussion-question-list{
+  margin-left: -5px;
+}
+.comprehension-list.resource-list {
+  padding-left: 31px;
+}
+.content-p.resource-indent {
+  padding: 0;
+  background-color: #fff;
+}
+.resource-text {
+  color: #000;
+  font-size: 24px;
+  padding-top: 24px;
+}
+.resource-text p {
+  margin-bottom: 0;
+  padding-bottom: 24px;
+}
+.intro-text-container {
+  max-width: 1018px;
+}
+.intro-text-container p {
+  color: #000;
+
+  /* NK360 Font Option 1/Body */
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  letter-spacing: 0.024px;
+  align-self: stretch;
+}
+.content-column-one .resource-set {
+  text-align: left;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3.2px;
+  background-color: #251230;
+  min-height: 57px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+}
+.content-column-one .resource-set p {
+  padding-left: 55px;
+  margin-bottom: 0;
+  color: #7dd6b2;
+}
+.content-column-one .resource-set span {
+  color: #f26520;
+}
+.content-column-two {
+  background: #049500;
+  min-height: 449px;
+  max-height: 449px;
+  /* background-image: url("/nk360/american-revolution-perseverance/img/hi-res/270219_000_01c_20191018_ps_crop.png"); */
+}
+.content-column-two img {
+  min-height: 449px;
+  max-height: 449px;
+  width: 100%;
+  object-fit: fill;
+}
+
+@media (max-width: 1200px) {
+  .content-container > div {
+    flex: 100% !important;
+  }
+}
+
+.u-bg-ink {
+  background-color: #201747;
+}
+.u-bg-teal {
+  background-color: #00a9ce;
+}
+.containers {
+  display: flex;
+  width: 100%;
+}
+.item {
+  margin: 10px;
+}
+.images {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  margin-inline: auto;
+  padding-block: 5rem 3rem;
+}
+.container {
+  height: auto;
+  margin-inline: auto;
+  /* padding-inline: 1.5rem; */
+  /* padding-block: 4rem 2rem; */
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title-medium {
+  font-family: inherit;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.title-large {
+  font-family: inherit;
+  font-size: 56px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 60px 70px;
+}
+.column {
+  /* display: grid; */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.feature {
+  background-color: #fff;
+  /* display: grid; */
+  grid-column: span 3;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 2.5rem; */
+  align-items: center;
+  padding: 96px 32px;
+  border-bottom: 1px solid var(--color-white-200);
+  /* height: 626px; */
+  margin: auto;
+}
+.toolkit-section.home-page-section.home-page-intro{
+padding-bottom: 96px;
+padding-top: 96px;
+}
+.home-page-chapter-block{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 96px
+}
+
+.home-page-chapter-info.summative-info{
+  gap: 34px;
+}
+.home-page-chapter-info.two-line-info{
+  gap: 60px;
+}
+.home-page-chapter-info.three-line-info{
+  gap: 16px;
+}
+.home-page-btns{
+display: flex;
+gap: 8px;
+}
+.home-page-summative-btns{
+  display: flex;
+  gap: 89x;
+}
+
+.chapter-top-intro-text{
+  font-size: 24px;
+  padding-right: 32px;
+}
+
+.btn.chapter-btn a{
+  text-decoration: none;
+  color: #fff;
+}
+.btn.chapter-btn.chapter-btn-dark{
+  padding: 16px 24px;
+  background-color: #fff;
+  color: #000;
+}
+.btn:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.google-slide-btn{
+  display: flex;
+  justify-content: space-between;
+}
+.google-print-link-icon{
+  position: relative;
+    width: 20px;
+    top: -2px;
+    margin-left: 8px;
+}
+.print-btn-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-bottom: 64px;
+}
+.print-btn-wrapper:last-child{
+  padding-bottom: 0px;
+}
+@media (max-width: 545px) {
+  .google-slide-btn{
+    flex-direction: column;
+  }
+  .google-slide-btn .btn{
+    width: 60%;
+  }
+}
+
+#intro{
+ padding: 24px 24px 0 24px;
+  
+}
+@media(min-width: 1200px) {
+  #on-this-page{
+    padding-top: 0!important;
+    padding-left: 0;
+  }
+    #intro{
+    padding-bottom: 0!important;
+  }
+  #method{
+    padding-top: 0;
+  }
+  
+  }
+@media (max-width: 1200px) {
+   #on-this-page{
+    padding-top: 0!important;
+    padding-left: 0;
+  }
+    #intro{
+    padding-bottom: 0!important;
+  }
+}
+@media (max-width: 929px) {
+  .feature {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
+.article-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  height: 100%;
+  /* background-color: #64386f; */
+}
+.article-image {
+  height: 100%;
+  width: 100%;
+}
+
+.copy-icon {
+  width: 28px;
+  height: max-content;
+}
+.copy-btn,
+#copy-impact-comprehension {
+  cursor: pointer;
+}
+.text-and-icon {
+  display: flex;
+}
+
+
+
+.lesson-plans-title {
+  color: #D9D9D9;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 8px 24px;
+  line-height: 140%; /* 28px */
+letter-spacing: 0.024px;
+}
+
+
+.content-group, #recommended, #standards, #essential, #inquery, #independent, #method, #on-this-page, #at-a-glance, #overview{
+padding: 24px 24px 48px 24px;
+ /* background: rgba(255, 250, 243, 0.80)!important; */
+}
+
+@media (max-width: 1200px) {
+    .content-group {
+        margin-bottom: 0px;
+    }
+}
+
+
+.border-inner {
+  border-bottom: 1px solid black;
+padding-top: 48px;
+}
+
+
+.equal-height-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991.98px) {
+  .equal-height-row {
+    display: block; 
+  }
+
+  .divider-left {
+    border-left: none;
+  }
+}
+
+.divider-left {
+  border-left: 2px solid #ccc;
+  padding-left: 1rem; /* optional spacing */
+}
+
+.classroom-info .classroom-info-title {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  font-family: "Source Sans 3";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%; /* 22.4px */
+letter-spacing: 0.019px;
+}
+
+.classroom-info p{
+  color: var(--True-Black, #000);
+/* NK360 Font Option 1/Body Small */
+font-family: "Source Sans 3";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+letter-spacing: 0.019px;
+margin-bottom: 8px;
+}
+
+.classroom-info p:nth-of-type(2),
+.classroom-info p:nth-of-type(4) {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.at-a-glance-title, .related-title{
+ color: black;
+
+/* NK360 Font Option 1/H3 Option 1 */
+font-family: "Source Sans 3";
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 35.2px */
+letter-spacing: 0.038px;
+}
+
+.related-title{
+  color: black;
+  margin-top: 24px;
+}
+
+a.btn.start-btn {
+  text-decoration: none !important;
+}
+
+a.btn.start-btn:hover {
+  text-decoration: none !important;
+  color: #fff;
+  /* background-color: #17467B; hover background */
+}
+
+
+.list-with-left-line {
+  list-style-type: none;
+  padding-left: .6rem;
+  border-left: 2px solid #999;
+  margin-left: 1.5rem;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.list-with-left-line li::before {
+  content: "● "; 
+  font-size: .6em; 
+  color: #000; 
+}
+
+
+.list-with-left-line li {
+  margin-bottom: 1rem;
+}
+
+.list-with-left-line a {
+  text-decoration: underline;
+  color: inherit;
+  padding-left: 0.3rem;
+}
+
+.rationale-list {
+  list-style-type: none;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.rationale-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.rationale-list li::before {
+  content: "● "; 
+  font-size: .6em;
+  color: #000; 
+  position: relative;
+  right: 10px;
+}
+
+.central-question-wrapper {
+  width: 100%;
+  min-height: 100px;
+}
+
+.left-box {
+  width: 100%;
+  max-width: 40%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 24px;
+  background-color: white;
+}
+
+.right-box {
+  width: 100%;
+  padding: 24px;
+  background-color: white;
+}
+
+.right-box .mb-1 {
+  font-family: "Source Sans 3";
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: 110%; /* 30.8px */
+letter-spacing: 0.034px;
+}
+
+@media (max-width: 1200px) {
+  .central-question-wrapper {
+    flex-direction: column !important;
+  }
+
+  .left-box {
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+
+  .right-box {
+    width: 100%;
+  }
+}
+
+
+.custom-bullets {
+  padding-left: 1.2rem;
+  font-size: 20px;
+}
+
+.custom-bullets li {
+  margin-bottom: 0.75rem;
+}
+
+.custom-bullets li::marker {
+  font-size: .7em;
+}
+
+    .container.central-question-table{
+      padding: 0;
+      max-width: none;
+    }
+
+    .border.border-dark{
+      border-top: none!important;
+    }
+   #central-question-top-border{
+    border-top: solid 1px black!important;
+    }
+
+
+  .left-box {
+    border-bottom: none; 
+  }
+
+
+.chapter-btn-students, .chapter-btn-teachers{
+  padding: 16px 24px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 20px */
+  letter-spacing: 0.024px;
+  }
+
+.image-wrapper{
+padding: 24px 24px 24px 0px;
+}
+
+.image-wrapper.interactive-image-wrapper{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.interactive-image-wrapper p{
+  color: #000;
+
+/* Quotient - body small */
+font-family: "Source Sans 3";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%; /* 22.4px */
+letter-spacing: 0.024px;
+}
+
+@media (max-width: 1200px) {
+    .interactive-image-wrapper p{
+        width: 100%;
+    }
+}
+
+.image-wrapper-slides{
+padding-bottom: 0px;
+}
+
+.image-wrapper-slides img{
+padding-bottom: 0px;
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+
+.row.slides-interactive-wrapper{
+  display: flex;        
+  flex-wrap: wrap;      
+  gap: 1.5rem;          
+}
+
+@media (max-width: 1200px) {
+  .image-wrapper {
+    padding: 48px 24px 48px 24px;
+}
+ 
+}
+
+  .no-radius {
+  border-radius: 0!important;
+}
+
+
+
+.instruction-box {          
+    width: 100%;  
+    padding-right: 0px;            
+     padding-top: 0; 
+}
+
+.instruction-title-wrapper { 
+  margin: auto;
+ }  
+
+.instruction-title-wrapper .instruction-text{
+  color:#000;
+  font-family:"Hiragino Kaku Gothic Pro W6", system-ui, sans-serif;
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:.22px;
+  line-height:1.45;
+  /* max-width:60ch; */
+  margin:24px auto 0;       
+  text-align:center;       
+
+}
+
+.instruction-inner {
+    max-width: 66%;  
+    margin-left: 0;   
+    padding-right: 72px;  
+}
+
+
+.teacher-tip{
+  display: grid;
+  grid-template-columns: 1rem max-content 1fr;
+  align-items: start;
+  margin: 16px 48px;
+  font-size: 20px;
+  line-height: 1.5;
+  background: transparent; 
+  position: relative;
+}
+
+/* bullet */
+.teacher-tip::before{
+  content: "•";
+  grid-column: 1;
+  line-height: 1;
+  color: #000;
+}
+
+/* label */
+.teacher-tip .label{
+  grid-column: 2;
+  color: #921716;
+
+/* Quotient - Teacher Tips */
+font-family: "Source Sans 3";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0.384px;
+}
+
+/* body aligns under itself, not the label */
+.teacher-tip .tip-text{
+  grid-column: 3;
+  color: #000;
+
+/* Quotient - Teacher Tips */
+font-family: "Source Sans 3";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 137.5% */
+letter-spacing: 0.384px;
+}
+
+.teacher-tip-indent{
+  margin-left: 96px;
+}
+
+.content-list li{
+margin-bottom: 1rem;
+font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 28px */
+letter-spacing: 0.024px;
+}
+
+.content-list{
+  padding-left: 24px;
+}
+
+.content-list .no-number{
+  list-style: none;
+}
+
+.teacher-list li{
+font-family: "Source Sans 3";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+letter-spacing: 0.019px;
+}
+
+
+.teacher-list li::marker{
+  font-size:12px;  
+}
+
+
+.list-indent.before-teacher-tip-indent{
+  margin-left: 64px;
+}
+
+.list-indent strong{
+  color: #000;
+
+/* NK360 Font Option 1/H4 Option 1 */
+font-family: "Source Sans 3";
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 30.8px */
+letter-spacing: 0.034px;
+}
+
+.list-indent p{
+  margin: 24px 0;
+}
+
+.list-indent li::marker{
+  font-size: 16px;
+}
+
+/* .glance-indent{
+  padding-right: 72px;
+} */
+
+@media (max-width: 1200px) {
+.glance-indent{
+  padding-right: 0;
+}
+}
+
+
+.teacher-tip-text{
+  font-family: "Source Sans 3";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+letter-spacing: 0.019px;
+}
+
+.teacher-tip-title{
+  font-weight: 700;
+}
+
+.start-btn{
+color: black;
+
+/* Quotient - buttons */
+font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 95%; /* 19px */
+background: #DA9335;
+text-decoration: none;
+cursor: pointer;
+}
+
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #DA9335;
+  color: #fff;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.interactive-start-btn{
+  display: flex;
+  width: 100%;                 
+  padding: 16px;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 12px;                   
+  background: #DA9335;
+  color: black;
+  font-family: "Source Sans 3";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 95%;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #DA9335;
+  color: #fff;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.image-box{ justify-content: flex-start !important; }
+
+.start-btn-links{
+  display: block;
+  width: 216px;          
+  /* margin: 0 0 0 auto;   */
+}
+
+
+.start-btn-links, .interactive-btn-links{
+  text-decoration: none;
+}
+
+.start-btn-links:hover, .interactive-btn-links:hover{
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+    .interactive-start-btn, .small-start-btn, .start-btn-links, .interactive-btn-links {
+        width: 100%;
+    }
+}
+
+.small-start-btn .btn-arrow { margin-left: auto; }
+
+
+.btn-arrow{
+  width: 24px;
+height: 24px;
+aspect-ratio: 1/1;
+}
+
+.interactive-container{
+  padding: 24px;
+}
+.interactive-section{
+  padding: 24px;
+  background-color: white;
+}
+
+.card-title{
+color: black;
+
+/* Quotient - H3 */
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 35px; /* 134.615% */
+letter-spacing: 0.593px;
+}
+
+.card-subtitle{
+  color:black;
+
+/* Quotient - H4 */
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 35px; /* 159.091% */
+letter-spacing: 0.22px;
+margin-top: 24px;
+}
+
+/* ===== CONTAINER / BACKGROUNDS ===== */
+.content-outer { background:#162c42 !important; }              
+.chapter-background { background-color: #FDF9F2; } 
+        
+
+section.toolkit-section { 
+  max-width:none; 
+} 
+
+@media (max-width: 1200px) {
+    section.toolkit-section {
+        padding: 16px 0px 48px 0px;
+    }
+}
+
+/* ===== CHAPTER TITLE (badge + patterned strip) ===== */
+.chapter-title-container{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:48px;
+  padding-left:96px;           
+  margin:0 0 24px 24px;
+}
+
+
+/* Chapter 2 background pattern + tint */
+.chapter-title-container[data-chapter="sum"]{
+  position:relative; isolation:isolate;
+  padding:20px 24px; padding-left:96px; margin:0;
+}
+.chapter-title-container[data-chapter="sum"]::after{
+  content:"";
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(#fffaf4,#fffaf4),                
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-2/ch-2-layer.png");  
+  background-repeat:no-repeat,no-repeat;
+  background-size:cover,cover;
+  background-position:center,center;
+  opacity:.05;                                     
+  background-blend-mode:color;
+}
+.chapter-title-container[data-chapter="sum"] > *{ position:relative; z-index:1; }
+
+/* title text */
+.chapter-header-text{ margin-left:24px; }
+.sub-header{ font-size:32px; }
+.chapter-title-container h2{
+  color:#000; font-family:"Hiragino Kaku Gothic Pro W6";
+  font-size:48px; font-weight:600; letter-spacing:.058px; margin-bottom:0;
+}
+.chapter-title-container[data-chapter="sum"] h2{
+  font-family:"Hiragino Kaku Gothic Std"; font-size:32px; font-weight:800; letter-spacing:1.28px;
+}
+.chapter-title-container[data-chapter="sum"] .sub-header{
+color: var(--True-Black, #000);
+font-family: "Source Sans 3";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 26.4px; /* 110% */
+letter-spacing: 0.691px;  
+}
+
+/* ===== CARD LAYOUT (text block + image) ===== */
+.home-page-chapter-block{ display:flex; flex-direction:column; gap:24px; }
+
+/* right (rust) column */
+#chapter-2-block{ background:#C15425; }
+
+/* inner content */
+.home-page-chapter-info{
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:24px;
+}
+.home-page-chapter-text, .home-page-btns{
+  width:90%; max-width:720px;
+}
+.home-page-chapter-text p{ margin:0 0 8px; }
+.home-page-chapter-text p:last-child{ margin-bottom:0; }
+
+/* question text */
+.card-text{
+  color:#fff; font-family:"Source Sans 3"; font-size:24px; font-weight:400;
+  line-height:22px; letter-spacing:.576px; margin-bottom:8px;
+}
+.card-text-bold{
+  color:#fff; font-family:"Source Sans 3"; font-size:24px; font-weight:600;
+  line-height:24px; letter-spacing:.691px;
+}
+
+/* buttons row */
+.home-page-btns{
+  display:flex; justify-content:flex-start; align-items:center; gap:48px;
+}
+.btn.chapter-btn{
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:12px 20px; text-decoration:none;
+  transition:background-color .3s ease,color .3s ease,border .3s ease;
+}
+/* “Start Chapter 2” button look in the rust panel */
+#chapter-2-block .btn.chapter-btn.next-chapter-btn{
+  background:#EEF3EB; color:#090B07; font-size:20px; font-weight:700; line-height:100%;
+  letter-spacing:.024px;
+}
+
+/* image column */
+.home-page-chapter-img img{
+  width:100%; height:300px; max-height:369px; object-fit:cover; display:block;
+}
+
+  .chapter-img-desktop{
+    width: 100%;
+    height: 215px;         
+    object-fit: cover;      
+    object-position: center top; 
+    border: 3px solid #DA9335;
+  }
+
+.teacher-instruction-img{
+  width: 216px;
+  height: auto;
+  border: 3px solid #DA9335;
+  box-sizing: border-box;
+  display: block;
+}
+
+.interactive-instruction-img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #DA9335;
+    box-sizing: border-box;
+    display: block;
+}
+
+@media (max-width:1200px){
+  .chapter-title-container{ padding-left:80px; }
+  .chapter-header-text{ margin-left:8px; }
+  .home-page-chapter-info{ padding:24px; }
+  .home-page-chapter-text, .home-page-btns{ width:100%; max-width:none; justify-content:center; }
+  .chapter-title-container h2{ font-size:28px; }
+  .hero-art{
+    display: none;
+  }
+}
+@media (max-width:600px){
+  .home-page-btns{ gap:12px; }
+}
+
+.chapter-title-container[data-chapter="2"]::before{ z-index: 2; }
+.chapter-title-container[data-chapter="2"]::after{  z-index: 0; }
+
+
+.chapter-hero-block { background: #F5F3ED; }
+
+.chapter-hero.chapter-title-container{
+  position: relative;
+  isolation: isolate;
+  padding: 48px 0 24px 0;
+  margin: 0;
+  padding-top: 0;
+}
+
+
+.chapter-hero.chapter-title-container::before{ z-index:2; }
+
+.chapter-hero.chapter-title-container > *{ position:relative; z-index:1; }
+
+
+
+.chapter-header-text{ 
+  top:24px;
+  position: relative;
+
+ }
+.sub-header{ font-size:20px; line-height:1.1; margin:0; }
+
+.lesson-title .nowrap{ white-space:nowrap; }
+
+.hero-art img{
+  display:block; width:100%; height:auto;
+  transform: translateZ(0); 
+    height: 350px;
+    object-fit: cover;
+}
+
+/* --- Rust CTA bar --- */
+.chapter-cta{
+  background:#DA9335;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:20px 24px;
+  border-top:4px solid rgba(0,0,0,.08);  
+}
+
+.chapter-cta .cta-title{
+ color: black;
+
+/* Quotient - H3 */
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 35px; /* 134.615% */
+letter-spacing: 0.593px;
+}
+.chapter-cta .question{
+color: black;
+
+/* Quotient - Body Large */
+font-family: "Source Sans 3";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 35.2px; /* 110% */
+letter-spacing: 0.038px;
+width: 70%;
+}
+
+.download-btn{
+  border:2px solid black;
+  background:transparent;
+  color:#fff;
+  padding:14px 20px;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+  color: black;
+
+/* Quotient - PDF */
+font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 20px */
+letter-spacing: 0.024px;
+text-decoration: none;
+}
+.download-btn .icon{ height:1.1em; }
+
+.download-btn:hover{
+  background:#fff;
+  color:#C15425;
+  border-color:#fff;
+}
+
+/* --- Badge color for chapter 2 --- */
+.chapter-title-container[data-chapter="2"]::before{ 
+  background:#C15425; 
+color: var(--True-White, #FFF);
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 35.2px; /* 110% */
+letter-spacing: 1.229px;
+}
+
+/* --- Responsive tweaks --- */
+@media (max-width:1200px){
+  .chapter-hero.chapter-title-container{ padding-left:80px; }
+  .chapter-header-text{ margin-left:8px; }
+  .lesson-title{ font-size:36px; }
+  .chapter-cta .question{ font-size:24px; }
+}
+
+@media (max-width:768px){
+  .lesson-title{ font-size:30px; }
+  .chapter-cta{ flex-direction:column; align-items:flex-start; }
+  .download-btn{ align-self:flex-start; }
+}
+
+.chapter-title-container{
+  padding-top: 88px;         
+  padding-left: 24px;       
+}
+
+/* Reposition the circle */
+.chapter-title-container::before{
+  top: 24px;                   
+  left: 24px;                
+  transform: none;           
+  margin-left: 0;           
+  z-index: 2;               
+}
+
+
+@media (max-width: 1200px){
+  .chapter-title-container{ padding-top: 80px; padding-left: 16px; }
+  .chapter-title-container::before{ left: 16px; }
+}
+
+.section-title{
+  color: black;
+  font-family: "Hiragino Kaku Gothic Pro W6";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.28px;
+  padding:12px 24px;
+  margin-bottom:0;
+
+  /* top layer = rust tint, bottom layer = pattern (smaller tile) */
+  background:#DA9335;
+    /* linear-gradient(#c05425, #c05425) 0 0 / 100% 100% no-repeat,
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-2/Tch2-background-Pattern.png") 0 0 / 380px auto repeat; */
+
+  /* keep  tinting */
+  background-blend-mode: color;
+}
+
+
+.slides-interactive-wrapper{
+  justify-content: center;
+}
+
+.before-student-task{
+  padding: 0;
+}
+
+.accordion-content{
+  border-bottom: 1px solid var(--True-White, #FFF);
+}
+
+.ch2-content.accordion-content {
+  background: #F5DACE!important;
+}
+
+#ch2-header.accordion-header{
+background: var(--AmRev-Ch2, #D96B3B);
+}
+
+/* Summative header background */
+.chapter-title-container[data-chapter="sum"]::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(#F8EBD7, #F8EBD7),   /* cream */
+    url("/nk360/american-revolution-perseverance/assets/images/sum-layer.png");
+  background-repeat:no-repeat, no-repeat;
+  background-size:cover, cover;
+  background-blend-mode: color;
+  opacity: .2;
+  background-position: 0 0, 50% -20px;
+  filter: saturate(1.08) brightness(1.06);
+}
+
+.chapter-title-container[data-chapter="sum"] > *{ position:relative; z-index:1; }
+.chapter-title-container[data-chapter="sum"]::before{ z-index:2; }
+
+.student-task{
+  color: var(--True-Black, #000);
+  /* Quotient - H3 */
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px; /* 134.615% */
+  letter-spacing: 0.593px;
+}
+
+.lesson-title .line {
+  display: block;
+  margin-bottom: 24px;
+}
+
+
+
+
+
+
+
+

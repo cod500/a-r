@@ -1,0 +1,465 @@
+/* ===============================
+   Chapter 3 Theme (drop-in)
+   - 1500px rail
+   - Ch3 colors, gradients, patterns
+   - Hero/CTA/Section headers
+   - Home-page block fluid split (25/75 → 50/50 cap)
+   =============================== */
+
+:root{
+  --ch3-ink: #162c42;     /* nav/outer bg ink */
+  --ch3-bg:  #FDF9F2;     /* chapter paper */
+  --ch3-accent: #C15425;  /* Chapter 3 green */
+  --ch3-accent-dark: #D96B3B;
+  --ch3-tint: #EFE7DC;    /* soft beige tint over patterns */
+
+  --content-max: 1500px;
+  --content-pad: 24px;
+
+  --circle-size: 70px;         /* badge diameter */
+  --gap-after-badge: 16px;     /* space between badge and title */
+  --circle-gap: 12px;          /* used for general rail offsets */
+  --circle-nudge: clamp(-4px, 0.6vw, 4px);
+
+  /* single source of truth for the content rail */
+  --content-left: max(
+    var(--content-pad),
+    calc(50vw - (var(--content-max)/2) + var(--content-pad))
+  );
+}
+
+/* ---- Outer/paper ---- */
+.content-outer{ background: var(--ch3-ink) !important; }
+.chapter-background{ 
+  background: var(--ch3-bg) !important;
+/* box-shadow: 0 1px 0 var(--ch3-bg); */
+}
+
+/* ===============================================================
+   HERO: full-bleed band; badge + title locked to rail; pattern
+   =============================================================== */
+#lesson-hero-3{
+  margin:0 !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+
+.content-outer > .content.chapter-background > section#lesson-hero-3,
+.content-outer > .content.chapter-background > section#lesson-hero-3 .before-text-container{
+  margin-left:0 !important; margin-right:0 !important;
+  padding-left:0 !important; padding-right:0 !important;
+}
+
+.content-outer > .content.chapter-background > section#lesson-hero-3 .container{
+  max-width:100% !important;
+  padding-left:0 !important; padding-right:0 !important;
+}
+
+/* Badge + patterned strip */
+#lesson-hero-3 .chapter-hero.chapter-title-container{
+  position:relative; isolation:isolate;
+  padding:48px 0 24px 0;
+  margin:0;
+}
+.chapter-title-container::before{
+  background: #C15425;
+  color: #fff;
+    font-family: "Hiragino Kaku Gothic Pro W6";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35.2px;
+    letter-spacing: 1.229px;
+}
+.chapter-title-container::after{
+  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(var(--ch3-tint), var(--ch3-tint)),
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-2/ch-2-layer.png");
+  background-repeat:no-repeat,no-repeat;
+  background-size:cover,cover;
+  background-position:center,center;
+  opacity:.07;               
+  background-blend-mode:color;
+}
+#lesson-hero-3 .chapter-hero.chapter-title-container > *{ position:relative; z-index:1; }
+
+/* Title aligned to rail + badge + gap */
+#lesson-hero-3 .chapter-header-text{
+  padding-left:0 !important;
+  margin-right:auto !important;
+  margin-left: calc(var(--content-left) + var(--circle-size) + var(--gap-after-badge) + -84px) !important;
+  text-align:left !important;
+}
+#lesson-hero-3 .chapter-header-text .sub-header{
+  color:#000;
+  font: 400 24px/1.1 "Source Sans 3", system-ui, sans-serif;
+  letter-spacing:.691px;
+  margin:0;
+}
+
+.lesson-title{
+color: var(--True-Black, #000);
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.28px;
+}
+.lesson-title .nowrap{ white-space:nowrap; }
+
+/* Hero art stays on the right; gentle shift toward 50/50 on wide screens */
+
+
+#lesson-hero-3 .hero-art img{
+  display:block; width:100%; height:350px; object-fit:cover;
+}
+
+/* ===============================================================
+   CTA bar under hero (on the same rail)
+   =============================================================== */
+.chapter-cta{
+  background: var(--ch3-accent);
+  color:#000;                        
+  display:flex; align-items:center; justify-content:space-between;
+  gap:24px; padding:20px 24px; border-top:4px solid rgba(0,0,0,.08);
+  /* rail padding */
+
+  box-sizing:border-box;
+}
+.chapter-cta .cta-title{
+  font:600 26px/35px "Hiragino Kaku Gothic Pro W6", system-ui, sans-serif;
+  letter-spacing:.593px;
+  color:#fff;
+}
+.chapter-cta .question{
+  font:400 32px/1.1 "Source Sans 3", system-ui, sans-serif;
+  letter-spacing:.038px;
+  width:70%; color:#fff;
+}
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: #C15425;
+  color: #fff;
+  padding: 12px 20px;
+  font-family: "Source Sans 3";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.024px;
+  text-decoration: none !important;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.chapter-cta .download-btn:hover{
+  box-shadow: inset 0 0 0 100vw rgba(255,255,255,0.1); /* subtle overlay */
+}
+/* Hover, focus, active states */
+.download-btn:hover,
+.download-btn:focus,
+.download-btn:active {
+  background: #C15425BF !important; /* lighter green overlay */
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Download icon style */
+.download-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('/nk360/american-revolution-perseverance/assets/images/download-btn.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: opacity 0.25s ease;
+}
+
+/* Optional: icon stays same color (white) */
+.download-btn:hover .download-icon {
+  opacity: 0.9; /* subtle feedback */
+}
+
+.chapter-card-btn {
+  border: 2px solid #C15425; /* Card border */
+  background-color: #C15425; /* Button background */
+
+}
+
+
+.chapter-card-btn:hover {
+  background-color: #C15425BF; /* Hover background */
+  border-color: #C15425BF;     /* Hover border */
+}
+
+.chapter-card-btn:hover .teacher-instruction-img {
+  border-color: #C15425BF !important;
+}
+.chapter-img-desktop:hover{
+  border-color: #C15425BF !important;
+
+}
+
+.interactive-card-btn {
+  border: 2px solid #C15425;     /* Card border */
+  background-color: #C15425;     /* Button background */
+}
+
+.interactive-card-btn:hover {
+  background-color: #C15425BF;   /* Hover background */
+  border-color: #C15425BF;       /* Hover border */
+}
+
+.interactive-card-btn:hover .image-box img {
+  border-color: #C15425BF;
+}
+
+@media (max-width:768px){
+  .chapter-cta{ flex-direction:column; align-items:flex-start; }
+}
+
+/* ===============================================================
+   Section headers (pattern + solid tint like Ch3)
+   =============================================================== */
+#intro.section-title{
+  color:#fff;
+  font:700 40px/1.1 "Source Sans 3", system-ui, sans-serif;
+  letter-spacing:.048px;
+  padding:12px 24px;
+}
+
+.section-title{
+  color: #fff;
+}
+
+.section-title-container{
+     background:
+    linear-gradient(var(--ch3-accent), var(--ch3-accent)) 0 0 / 100% 100% no-repeat,
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-2/Tch2-background-Pattern.png") 0 0 / 500px auto repeat;
+  background-blend-mode: color;
+}
+
+.chapter-title-container {
+    padding-top: 0px;
+    padding-left: 24px;
+}
+
+.at-a-glance-title, .related-title {
+    color: #C15425;
+}
+
+
+/* ===============================================================
+   Home page chapter block (green panel + image) for Ch3
+   - fluid 25/75 → 50/50 cap
+   - text pinned to the same rail
+   =============================================================== */
+
+
+/* Green left panel */
+#chapter-3-block{ background: var(--ch3-accent); }
+
+
+
+
+/* Image side always fills */
+#chapter-3-block-border .home-page-chapter-img img{
+  display:block; width:100%; height:100%; object-fit:cover;
+}
+
+/* Buttons & images adopt Ch3 accent borders */
+.chapter-img-desktop,
+.teacher-instruction-img,
+.interactive-instruction-img{
+  border: 0px solid var(--ch3-accent) !important;
+}
+
+
+
+
+/* Restore true 50/50 on desktop where needed */
+
+
+/* ===============================================================
+   Accordions (Ch3 hues)
+   =============================================================== */
+.accordion-header{ background: var(--ch3-accent-dark) !important; }
+.accordion-content{
+  background:#F5DACE!important;       
+  border-bottom: 1px solid #fff !important;
+}
+.accordion-title{ color:#fff; }
+
+/* ===============================================================
+   Title strip used as a simple divider (no badge)
+   =============================================================== */
+
+
+.chapter-title-container{
+    margin: 0;
+}
+
+/* Small/mobile tweaks */
+@media (max-width:1200px){
+  #lesson-hero-3 .hero-art{ display:none; }
+}
+
+
+.start-btn{
+color: var(--True-White, #fff);
+
+/* Quotient - buttons */
+font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 95%; /* 19px */
+background: #C15425;
+text-decoration: none;
+cursor: pointer;
+}
+
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #C15425;
+  color: #000;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.interactive-start-btn{
+  display: flex;
+  width: 100%;                 
+  padding: 16px;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 12px;                   
+  background: #C15425;
+  color: #fff;
+  font-family: "Source Sans 3";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 95%;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #C15425;
+  color: #fff;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.chapter-title-border[data-chapter="3"],
+.chapter-title-border-bottom[data-chapter="3"]{
+  padding-left: 0 !important;
+}
+
+
+/* === CH2 TITLE-BORDER: full-bleed patterned band, no circle === */
+/* Reuse the same construction style as the section headers (like CH3),
+   but targeted to the title-border band(s) for Chapter 2 only. */
+
+/* 1) Kill the circle in the border bands */
+.chapter-title-container.chapter-title-border[data-chapter="3"]::before,
+.chapter-title-container.chapter-title-border-bottom[data-chapter="3"]::before{
+  content: none !important;
+}
+
+/* 2) Make the band full-bleed + identical “tint over pattern” background */
+.chapter-title-container.chapter-title-border[data-chapter="3"],
+.chapter-title-container.chapter-title-border-bottom[data-chapter="3"]{
+  position: relative;
+  isolation: isolate;
+  display: block;
+
+  /* wipe inherited spacing from generic .chapter-title-container */
+  padding: 0 !important;
+  margin: 0 !important;
+
+  /* ensure it spans edge-to-edge */
+  width: 100%;
+  background: none !important; /* we’ll draw it with ::after */
+}
+
+.chapter-title-container.chapter-title-border[data-chapter="3"]::after,
+.chapter-title-container.chapter-title-border-bottom[data-chapter="3"]::after{
+ content: "";
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(#fffaf4, #fffaf4),
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-2/ch-2-layer.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+  opacity: .4;                  /* match ch1’s feel; tweak if needed */
+  background-blend-mode: color;
+}
+
+.chapter-title-container.chapter-title-border[data-chapter="3"] > *,
+.chapter-title-container.chapter-title-border-bottom[data-chapter="3"] > *{
+  position: relative;
+  z-index: 1;
+}
+
+.card-title{
+color: #C15425;
+
+/* Quotient - H4 */
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 35px; /* 159.091% */
+letter-spacing: 0.22px;
+}
+
+.card-subtitle{
+  color: #C15425;
+
+/* Quotient - H4 */
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 35px; /* 159.091% */
+letter-spacing: 0.22px;
+margin-top: 24px;
+}
+
+  /* keep dropdown groups closed by default */
+.sideNav .navbar-nav .dropdown-links.teacher-mobile-links { display: none; }
+
+.chapter-header-text {
+    top: 48px;
+    position: relative;
+}
+
+@media(max-width:1200px){
+  .chapter-header-text {
+    top: 0px;
+}
+
+    .chapter-title-container[data-chapter="2"]::before{
+      top: 16px!important;
+      left: 16px!important;
+    }
+
+     .home-page-chapter-block{
+margin-bottom: 48px!important;
+  }
+}

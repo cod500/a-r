@@ -1,0 +1,336 @@
+/* =========================================
+   Chapter 5 Theme (colors + patterns only)
+   - Keep Chapter 1 layout; no structure edits
+   ========================================= */
+
+:root{
+  --ch5-ink: #162c42;       /* outer/nav bg */
+  --ch5-bg:  #FDF9F2;       /* chapter paper */
+  --ch5-accent: #57315E;    /* Chapter 5 plum */
+  --ch5-tint: #FFF9F4;      /* soft tint for patterns */
+}
+
+/* Containers adopt Ch5 palette */
+.content-outer{ background: var(--ch5-ink) !important; }
+.chapter-background{ background: var(--ch5-bg) !important; }
+
+.chapter-title-container.chapter-title-border{
+padding-top: 24px;
+}
+
+
+/* Number badge color for Chapter 5 */
+.chapter-title-container[data-chapter="5"]::before{
+  background: var(--ch5-accent) !important;
+  color:#fff !important;
+}
+
+/* Patterned strip behind title container */
+.chapter-title-container[data-chapter="5"]{
+  position: relative; isolation: isolate;
+  margin-bottom: 0;
+}
+.chapter-title-container[data-chapter="5"]::after{
+  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(var(--ch5-tint), var(--ch5-tint)),
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-5/ch-5-layer.png");
+  background-repeat:no-repeat,no-repeat;
+  background-size:cover,cover;
+  background-position:center,center;
+  opacity:1;
+  background-blend-mode: color;
+}
+.chapter-title-container[data-chapter="5"] > *{ position:relative; z-index:1; }
+
+/* CTA bar */
+.chapter-cta{
+  background: var(--ch5-accent) !important;
+  color:#fff !important;
+}
+.chapter-cta .cta-title,
+.chapter-cta .question{ color:#fff !important; }
+.download-btn {
+  background: #57315E;
+}
+
+/* Hover, focus, active states */
+.download-btn:hover,
+.download-btn:focus,
+.download-btn:active {
+  background: #57315EBF !important; /* lighter green overlay */
+}
+.chapter-card-btn {
+  border: 2px solid #57315E; /* Card border */
+  background-color: #57315E; /* Button background */
+}
+
+.chapter-card-btn:hover {
+  background-color: #57315EBF; /* Hover background */
+  border-color: #57315EBF;     /* Hover border */
+}
+
+.chapter-card-btn:hover .teacher-instruction-img {
+  border-color: #57315EBF !important;
+}
+
+.interactive-card-btn {
+  border: 2px solid #57315E;     /* Card border */
+  background-color: #57315E;     /* Button background */
+}
+
+.interactive-card-btn:hover {
+  background-color: #57315EBF;   /* Hover background */
+  border-color: #57315EBF;       /* Hover border */
+}
+
+.interactive-card-btn:hover .image-box img {
+  border-color: #57315EBF;
+}
+/* Section headers: tint + pattern */
+.section-title{
+  color:#fff !important;
+ 
+}
+
+.section-title-container{
+ background:
+    linear-gradient(var(--ch5-accent), var(--ch5-accent)) 0 0 / 100% 100% no-repeat,
+    url("/nk360/american-revolution-perseverance/assets/images/chapter-5/Tch5-background-Pattern.png") 0 0 / 500px auto repeat !important;
+  background-blend-mode: color !important;
+}
+
+/* Image borders use Ch5 accent */
+.chapter-img-desktop,
+.teacher-instruction-img,
+.interactive-instruction-img{
+  border: 0px solid var(--ch5-accent) !important;
+}
+
+/* Accordion hues */
+.accordion-header{ background: var(--ch5-accent) !important; }
+.accordion-content{
+  background: #D5CBD6 !important;   /* light plum wash */
+  border-bottom: 1px solid #fff !important;
+}
+.accordion-title{ color: #fff !important; }
+
+/* Divider variant (no badge) clean for Ch5 */
+.chapter-title-container.chapter-title-border[data-chapter="5"]::before{ content:none !important; }
+
+/* ===== Fix Chapter 5 two-up teaching sections (Video, Reading, Formative) ===== */
+
+/* Turn the custom wrappers into a consistent two-column layout */
+.content-width.ga,
+.content-width.align-items-start {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 24px !important;           /* modern flex-gap for spacing */
+  align-items: flex-start !important;
+}
+
+/* Undo the global "stretch to 100%" on the left box */
+.content-width.ga .instruction-box,
+.content-width.align-items-start .instruction-box {
+  width: auto !important;
+  max-width: none !important;
+  flex-grow: 0 !important;        /* stop it from swallowing space */
+  min-width: 0 !important;
+}
+
+/* Make both columns 50/50 at lg+, full-width below that */
+@media (min-width: 992px){
+  .content-width.ga > .instruction-box.col-lg-6,
+  .content-width.ga > .card-box.col-lg-6,
+  .content-width.align-items-start > .instruction-box.col-lg-6,
+  .content-width.align-items-start > .card-box.col-lg-6{
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Trim the heavy right padding on the left column so it doesn't shrink itself */
+  .content-width.ga > .instruction-box,
+  .content-width.align-items-start > .instruction-box{
+    padding-right: 24px !important;
+  }
+}
+
+/* Stack on md- and down */
+@media (max-width: 991.98px){
+  .content-width.ga > .instruction-box,
+  .content-width.ga > .card-box,
+  .content-width.align-items-start > .instruction-box,
+  .content-width.align-items-start > .card-box{
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Keep images/buttons from forcing shrink */
+.card-box .teacher-instruction-img{ max-width: 100%; height: auto; }
+
+.start-btn{
+color: var(--True-White, #FFF);
+
+/* Quotient - buttons */
+font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 95%; /* 19px */
+background: #57315E;
+text-decoration: none;
+cursor: pointer;
+}
+
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #57315E;
+  color: #fff;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.interactive-start-btn{
+  display: flex;
+  width: 100%;                 
+  padding: 16px;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 12px;                   
+  background: #57315E;
+  color: #fff;
+  font-family: "Source Sans 3";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 95%;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.small-start-btn{
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;   
+  background: #57315E;
+  color: #fff;
+  font: 700 20px/0.95 "Source Sans 3";
+  text-align: left;
+  cursor: pointer;
+}
+
+.image-box{ justify-content: flex-start !important; }
+
+.start-btn-links{
+  display: block;
+  width: 216px;          
+  /* margin: 0 0 0 auto;   */
+}
+
+
+.start-btn-links, .interactive-btn-links{
+  text-decoration: none;
+}
+
+.start-btn-links:hover, .interactive-btn-links:hover{
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+    .interactive-start-btn, .small-start-btn, .start-btn-links, .interactive-btn-links {
+        width: 100%;
+    }
+
+    .chapter-title-container[data-chapter="5"]::before{
+       top: 16px!important;
+      left: 16px!important;
+    }
+
+   #lesson-hero-5 > div > div.chapter-hero.chapter-title-container > div > div.col-lg-5 > div {
+        margin-left: 0px !important;
+    }
+}
+
+.small-start-btn .btn-arrow { margin-left: auto; }
+
+.card-title{
+color: var(--AmRev-Ch2, #57315E);
+
+/* Quotient - H4 */
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 35px; /* 159.091% */
+letter-spacing: 0.22px;
+}
+
+.card-subtitle{
+  color: #57315E;
+
+/* Quotient - H4 */
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 35px; /* 159.091% */
+letter-spacing: 0.22px;
+margin-top: 24px;
+}
+
+.instruction-box
+ {
+    padding: 0px;
+    width: 100%;
+    padding-right: 0px;
+}
+
+.at-a-glance-title, .related-title{
+ color: #57315E;
+
+/* NK360 Font Option 1/H3 Option 1 */
+font-family: "Source Sans 3";
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 35.2px */
+letter-spacing: 0.038px;
+}
+
+.lesson-title{
+color: var(--True-Black, #000);
+font-family: "Hiragino Kaku Gothic Pro W6";
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.28px;
+}
+.lesson-title .nowrap{ white-space:nowrap; }
+
+.hero-art img{
+  display:block; width:100%; height:auto;
+  transform: translateZ(0); 
+    height: 350px;
+    object-fit: cover;
+}
+
+
+.chapter-title-container[data-chapter="5"] .sub-header{
+color: var(--True-Black, #000);
+font-family: "Source Sans 3";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 26.4px; /* 110% */
+letter-spacing: 0.691px;  
+}
+

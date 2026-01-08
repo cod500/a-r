@@ -1,0 +1,109 @@
+ .button-container a.btn.btn-dark.download-btn, #expand-all{
+  display: inline-grid !important;    
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: .5rem;
+  background:#022957;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 20px!important;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+#expand-all:hover{
+    background-color: #022957BF;
+    color:#FFF !important ;
+}
+
+.button-container a.btn.download-btn {
+  display: inline-grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  background:#022957;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 20px!important;
+  text-decoration: none;
+}
+
+/* Hover: only change background and text color */
+.button-container a.btn.download-btn:hover {
+    background-color: #022957BF;
+    color:#FFF !important ;
+}
+
+/* Swap icon on hover */
+.button-container a.btn.download-btn .icon-hover {
+  display: none;
+}
+
+.button-container a.btn.download-btn:hover .icon-default {
+  display: none;
+}
+
+.button-container a.btn.download-btn:hover .icon-hover {
+  display: inline;
+  /* height: 1.1em; */
+}
+/* .button-container .download-btn .icon-default,
+.button-container .download-btn .icon-hover {
+  width: 1.1em;
+  height: 1.1em;
+} */
+
+
+#ch1-header.accordion-header{
+background: var(--AmRev-Ch1, #597345);
+}
+#ch2-header.accordion-header{
+background: var(--AmRev-Ch2, #C15425);
+}
+#ch3-header.accordion-header{
+background: var(--AmRev-Ch3, #809D92);
+}
+#ch4-header.accordion-header{
+background: var(--AmRev-Ch4, #365F6D);
+}
+#ch5-header.accordion-header{
+background: var(--AmRev-Ch2, #57315E);
+}
+
+.ch1-content.accordion-content {
+background: #D5DCD0!important;
+}
+.ch2-content.accordion-content {
+  background: #F5DACE!important;
+}
+.ch3-content.accordion-content {
+background: #D8DFDC!important;
+}
+.ch4-content.accordion-content {
+  background: #CCD7DA!important;
+}
+.ch5-content.accordion-content {
+  background: #D5CBD6!important;
+}
+
+.accordion-content{
+  border-bottom: 1px solid var(--True-White, #FFF);
+}
+
+#ch3-header .accordion-title{
+  color: #000;
+}
+
+
+/* @media (max-width: 1200px) {
+  nav.sideNav.home-nav[data-nav="overview"].force-open-teachers #nav-lessons,
+  nav.sideNav.home-nav[data-nav="overview"].force-open-teachers #nav-vocab,
+  nav.sideNav.home-nav[data-nav="overview"].force-open-teachers #nav-close,
+  nav.sideNav.home-nav[data-nav="overview"].force-open-teachers #nav-additional {
+    display: block !important;
+  }
+} */
+
+
+
