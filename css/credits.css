@@ -1,0 +1,34 @@
+
+  /* keep dropdown groups closed by default */
+.sideNav .navbar-nav .dropdown-links { display: none; }
+
+ /* keep dropdown groups closed by default */
+.sideNav .navbar-nav .dropdown-links { display: none; }
+
+
+/* default: mobile-first (≤1200px) */
+.desktop-only { display: none !important; }
+
+.mobile-links,
+.teacher-mobile-links,
+#mobile-about-dropdown,
+#for-steachers-dropdown { display: list-item; } /* or block; your LIs will handle layout */
+
+/* ≥1201px: desktop view */
+@media (min-width: 1201px) {
+  .desktop-only { display: list-item !important; }
+
+  .mobile-links,
+  .teacher-mobile-links,
+  #mobile-about-dropdown,
+  #for-steachers-dropdown, .home-nav { display: none !important; }
+
+
+}
+
+
+
+
+
+
+
